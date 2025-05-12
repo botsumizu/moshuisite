@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>華景-導航</title>
+        <link rel="stylesheet" href="menu.css" type="text/css">
+    </head>
+    <body>
+        <!-- 左侧导航栏 -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="./pct/icon.png" alt="華景圖標">
+                <p>天華若景</p>
+            </div>
+            <div class="sidebar-search">
+                <input type="text" id="sidebarSearchInput" placeholder="搜索...">
+                <button onclick="searchText()">搜索</button>
+            </div>
+            <a href="#tools">繩墨-工具</a>
+            <a href="#learning">覃思-學習</a>
+            <a href="#entertainment">遊冶-娛樂</a>
+            <a href="#social">酬酢-社交</a>
+            <a href="#others">謐境-其他</a>
+
+            <!-- 底部按钮 -->
+            <div class="sidebar-footer">
+                <button onclick="window.open('https://github.com/botsumizu/moshuisite', '_blank')">
+                    <img src="pct/icon/github.png" alt="GitHub" class="footer-icon">
+                </button>
+                <button onclick="window.open('./doc/doc.html', '_self')">
+                    <img src="pct/icon/doc.png" alt="文档" class="footer-icon">
+                </button>
+                <button onclick="history.back()">
+                    <img src="pct/icon/back.png" alt="退回" class="footer-icon">
+                </button>
+            </div>
+        </div>
+
+        <!-- 侧边栏标题 -->
+        <div class="content">
+            <header class="site-header">
+                <div class="header-content">
+                    <img src="./pct/icon.png" alt="華景圖標" class="header-logo">
+                    <h1 class="header-title">華景-導航</h1>
+                    <p class="header-subtitle">荒蕪沙漠的掌燈人</p>
+                </div>
+            </header>
+
+            <!-- 工具类 -->
+            <div class="category-container" id="tools">
+                <h2 class="category-title">繩墨-工具</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>MOSHUI SITE</h3>
+                        <p>作者的個人網站，包括本人的電子簡歷、博客以及工具集</p>
+                        <a href="https://home.moshui.link/home_page" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Canva-可畫</h3>
+                        <p>多人在線合作設計網站，有豐富的素材，適合<del>組長作業</del>小組作業</p>
+                        <a href="https://www.canva.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>GitHub</h3>
+                        <p>全宇宙最好用的網站,一個代碼託管平臺</p>
+                        <a href="https://github.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Unsplash</h3>
+                        <p>免費圖片網站，可以搜尋所需的背景的圖片</p>
+                        <a href="https://unsplash.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>IconFinder</h3>
+                        <p>免費圖標素材網站</p>
+                        <a href="https://www.iconfinder.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>叢雨雲</h3>
+                        <p>梯子供應商</p>
+                        <a href="https://congyu.moe/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Coolors</h3>
+                        <p>生成配色方案的網站</p>
+                        <a href="https://coolors.co" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>漢典</h3>
+                        <p>漢字字形字源查詢網站，同時收錄一些古籍</p>
+                        <a href="https://www.zdic.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>chatGPT</h3>
+                        <p>chatGPT網頁版</p>
+                        <a href="https://chatgpt.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Grammarly</h3>
+                        <p>論文語法檢查網站</p>
+                        <a href="https://www.grammarly.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>DeepL</h3>
+                        <p>論文翻譯網站</p>
+                        <a href="https://www.deepl.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>火龍果</h3>
+                        <p>論文潤色改寫網站，本行三個軟件稱爲論文三件套</p>
+                        <a href="https://www.mypitaya.com/" target="_blank">訪問網站</a>
+                    </div>
+                </div>
+            </div>         <!-- 第二类 -->
+            <div class="category-container" id="learning">
+                <h2 class="category-title">覃思-學習</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>W3Schools</h3>
+                        <p>適合前端入門學習的網站</p>
+                        <a href="https://www.w3schools.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>菜鳥教程</h3>
+                        <p>中文編程學習網站</p>
+                        <a href="https://www.runoob.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>MOOC</h3>
+                        <p>中國大學慕課，適合大學牲寶寶體制</p>
+                        <a href="https://www.icourse163.org/.cn" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>EDX</h3>
+                        <p>麻省理工與哈佛合作推出的開放課程平臺</p>
+                        <a href="https://www.edx.org/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>FreeCodeCamp</h3>
+                        <p>免費的編程學習平台，提供完整的項目和認證。</p>
+                        <a href="https://www.freecodecamp.org" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Codecademy</h3>
+                        <p>提供交互式編程課程，適合學習 Python、JavaScript 等。</p>
+                        <a href="https://www.codecademy.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>MIT OpenCourseWare</h3>
+                        <p>麻省理工學院的開放課程平台，提供免費的大學課程資源。</p>
+                        <a href="https://ocw.mit.edu" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>The Odin Project</h3>
+                        <p>免費的 Web 開發學習平台，提供完整的學習路徑。</p>
+                        <a href="https://www.theodinproject.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>CS50</h3>
+                        <p>哈佛大學的計算機科學入門課程，適合零基礎學習者。</p>
+                        <a href="https://cs50.harvard.edu" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Khan Academy</h3>
+                        <p>提供免費的教育資源，涵蓋數學、科學和編程等。</p>
+                        <a href="https://www.khanacademy.org" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>GeeksforGeeks</h3>
+                        <p>提供計算機科學和編程相關的教程，適合學習算法和數據結構。</p>
+                        <a href="https://www.geeksforgeeks.org" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>LearnPython</h3>
+                        <p>專注於 Python 編程語言的學習，適合初學者。</p>
+                        <a href="https://www.learnpython.org" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>JapanGraduate</h3>
+                        <p>日本大學院過去問試題分享網站</p>
+                        <a href="https://oxslap.github.io/japanGraduate/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>CET真題</h3>
+                        <p>CET4、6歷年真題分享</p>
+                        <a href="https://github.com/DieDiDi/CET4-6-past-exam-paper" target="_blank">訪問網站</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第三类 -->
+            <div class="category-container" id="entertainment">
+                <h2 class="category-title">遊冶-娛樂</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Steam</h3>
+                        <p>全球最大的數字遊戲分發平臺</p>
+                        <a href="https://store.steampowered.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>IGN</h3>
+                        <p>提供最新的遊戲資訊、評測以及攻略</p>
+                        <a href="https://www.ign.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>GOG</h3>
+                        <p>提供一些經典遊戲資源</p>
+                        <a href="https://www.gog.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>GameSpot</h3>
+                        <p>遊戲新聞、討論板塊</p>
+                        <a href="https://www.gamespot.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Itch.io</h3>
+                        <p>獨立遊戲開發者的發佈平臺</p>
+                        <a href="https://www.gog.com" target="_blank">訪問網站</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第四类 -->
+            <div class="category-container" id="social">
+                <h2 class="category-title">酬酢-社交</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>NICONICO</h3>
+                        <p>N站，全球最大的彈幕視頻網站</p>
+                        <a href="https://www.nicovideo.jp/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>YOUTUBE</h3>
+                        <p>油管，全球最大的視頻網站</p>
+                        <a href="https://www.youtube.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>X</h3>
+                        <p>舊稱Twitter，全球最大社交平臺之一</p>
+                        <a href="https://x.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Telegram</h3>
+                        <p>全球最大的即時通訊社交平臺之一</p>
+                        <a href="https://telegram.org/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Discord</h3>
+                        <p>全球最大的即時通訊社交平臺之一</p>
+                        <a href="https://discord.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Reddit</h3>
+                        <p>全球最大的社交新聞網站</p>
+                        <a href="https://www.reddit.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Facebook</h3>
+                        <p>國際社交通訊網站網站</p>
+                        <a href="https://www.facebook.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Instagram</h3>
+                        <p>國際社交圖片分享網站</p>
+                        <a href="https://www.instagram.com/" target="_blank">訪問網站</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第五类 -->
+            <div class="category-container" id="others">
+                <h2 class="category-title">謐境-其他</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>真紅小站</h3>
+                        <p>原失落的小站，galgame遊戲資源網站</p>
+                        <a href="https://www.shinnku.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>青桔</h3>
+                        <p>galgame資源網站</p>
+                        <a href="https://www.qingju.org/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>琉璃神社</h3>
+                        <p>中文ACG資源資訊網站</p>
+                        <a href="https://www.hacg.icu/wp/57879.html" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>嗶咔漫畫</h3>
+                        <p>中文本子漫畫cos資源網站</p>
+                        <a href="https://picawang.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>禁漫天堂</h3>
+                        <p>知名中文本子漫畫cos網站</p>
+                        <a href="https://jmcomica.cc/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Hitomi.la</h3>
+                        <p>本子、畫師集合、cg網站</p>
+                        <a href="https://hitomi.la/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>iwara</h3>
+                        <p>i站，3d同人網站</p>
+                        <a href="https://www.iwara.tv/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>rule34video</h3>
+                        <p>r34video，3d同人網站</p>
+                        <a href="https://rule34video.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Galgamer</h3>
+                        <p>galgame遊戲評測</p>
+                        <a href="https://galgamer.moe/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>萌次元</h3>
+                        <p>ACG資源, 套圖</p>
+                        <a href="https://18moe.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>北紳の庭</h3>
+                        <p>二次元，白嫖各種紳士資源</p>
+                        <a href="https://hggard.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>紳士會所</h3>
+                        <p>各種ACG資源, 套圖</p>
+                        <a href="https://www.sshs.pw/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>UZXun社區</h3>
+                        <p>ACG, MMD, H油, H圖, 掛V</p>
+                        <a href="http://www.uzxun.in/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>靴下小屋</h3>
+                        <p>漢化組, ACG資源, 套圖COS</p>
+                        <a href="https://songshuxy.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>哔哩兔ACG</h3>
+                        <p>ACG資源, 套圖, 視頻, 裡番, ASMR, H油</p>
+                        <a href="http://www.biliacg216.xyz/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>妖次元</h3>
+                        <p>白嫖各種資源, AV, 套圖, 小說, 色圖, 磁力</p>
+                        <a href="http://www.510051.xyz/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>紳士咖啡廳</h3>
+                        <p>ACG資源, H油, 套圖, 小說, 色圖, COS</p>
+                        <a href="https://sskft6.buzz/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>ACG願望</h3>
+                        <p>白嫖ACG資源</p>
+                        <a href="https://acgyw.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>哥特動漫王國</h3>
+                        <p>ACG資源</p>
+                        <a href="https://www.gtloli.gay/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>次元狗</h3>
+                        <p>ACG資源, H油</p>
+                        <a href="https://www.acgndog.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>笨貓吧</h3>
+                        <p>ACG資源, H油</p>
+                        <a href="http://www.benmao8.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>貓之秋名山</h3>
+                        <p>白嫖H油, 本子, 圖包等</p>
+                        <a href="https://sakura.myacgcat.top/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>宅ACG</h3>
+                        <p>H油, 裡番, 寫真</p>
+                        <a href="https://www.zhaiacgb.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>紳士論</h3>
+                        <p>各種ACG資源</p>
+                        <a href="https://sslun.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>XACG資源社</h3>
+                        <p>各種ACG資源</p>
+                        <a href="https://acg.xacg.live/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>紳士の庭</h3>
+                        <p>漢化組, 圖資源</p>
+                        <a href="https://gmgard.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>紳士會所</h3>
+                        <p>各種ACG資源</p>
+                        <a href="https://www.hentaiclub.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>吾愛萌</h3>
+                        <p>各種ACG資源</p>
+                        <a href="https://acgupup.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>ACGBus</h3>
+                        <p>ACG資源</p>
+                        <a href="https://www.acgbuster.icu/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>紳士倉庫</h3>
+                        <p>各種ACG資源</p>
+                        <a href="https://cangku.icu/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>紳士論</h3>
+                        <p>各種ACG資源, 福利</p>
+                        <a href="https://sslun.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>御宅同萌</h3>
+                        <p>各種ACG資源</p>
+                        <a href="https://bbs2.acg-moe.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>萌宅領域</h3>
+                        <p>各種ACG資源</p>
+                        <a href="https://www.mzlingy.cc/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>萌幻ACG</h3>
+                        <p>ACG資源, H油</p>
+                        <a href="https://www.acghmoe.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>萌站</h3>
+                        <p>Galgame</p>
+                        <a href="https://www.mengzhan521.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>ACG次元小屋</h3>
+                        <p>各種ACG資源</p>
+                        <a href="http://acgzy8.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>H5Gal</h3>
+                        <p>H油為主</p>
+                        <a href="https://www.521gal.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>I社遊戲</h3>
+                        <p>H油資源</p>
+                        <a href="http://www.ishe123.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>花火學園</h3>
+                        <p>H油</p>
+                        <a href="http://www.sayhuahuo.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>次元客</h3>
+                        <p>ACG資源</p>
+                        <a href="https://www.acgke.cc/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>星空論壇</h3>
+                        <p>ACG資源, H油</p>
+                        <a href="https://bbs2.seikuu.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>魔窟二次元</h3>
+                        <p>ACG資源, H油</p>
+                        <a href="http://www.moku1.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>天使二次元</h3>
+                        <p>主Galgame</p>
+                        <a href="http://www.tianshie.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Gal領域</h3>
+                        <p>H油, 圖CG</p>
+                        <a href="http://www.galcg.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>嘰哩嘰哩</h3>
+                        <p>ACG資源</p>
+                        <a href="http://www.jiligame.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>ACG港灣</h3>
+                        <p>白嫖H油, ACG資源</p>
+                        <a href="http://www.acggw.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>South Plus</h3>
+                        <p>本子漫畫</p>
+                        <a href="https://www.south-plus.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Nutaku</h3>
+                        <p>國外H油在線玩, 掛V</p>
+                        <a href="https://www.nutaku.net/home/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>次元計劃</h3>
+                        <p>ACG資源, H油</p>
+                        <a href="http://www.acg02.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>18hh遊戲庫</h3>
+                        <p>ACG資源, H油</p>
+                        <a href="http://www.godacg.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>喵窩</h3>
+                        <p>ACG資源</p>
+                        <a href="http://ww1.nyagal.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>星月號</h3>
+                        <p>H油</p>
+                        <a href="https://x.xmoon.club/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>ACGKnow</h3>
+                        <p>白嫖H油</p>
+                        <a href="https://acgknow.me/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>ACGNGame</h3>
+                        <p>ACG資源</p>
+                        <a href="https://bbs.acgngame.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>扶她奶茶</h3>
+                        <p>ACG資源</p>
+                        <a href="https://www.futanaicha.xyz/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>資源統籌局</h3>
+                        <p>ACG資源多</p>
+                        <a href="https://gkdworld.xyz/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>KDays</h3>
+                        <p>Galgame</p>
+                        <a href="https://bbs2.kdays.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>次元W</h3>
+                        <p>ACG資源</p>
+                        <a href="https://www.cywacg.moe/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>快樂屋</h3>
+                        <p>ACG資源</p>
+                        <a href="https://123456.sbs/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>維咔ACG</h3>
+                        <p>ACG資源, H油</p>
+                        <a href="https://www.vikacg.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>芯幻次元</h3>
+                        <p>ACG資源</p>
+                        <a href="https://acg.la/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>初音社</h3>
+                        <p>各種ACG資源</p>
+                        <a href="https://www.mikuclub.cc/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>夢璃</h3>
+                        <p>ACG資源</p>
+                        <a href="https://moeli-desu.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>靈夢御所</h3>
+                        <p>ACG資源</p>
+                        <a href="https://blog.reimu.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>喵兔動漫社</h3>
+                        <p>ACG資源</p>
+                        <a href="https://miaotudms.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>喵屋</h3>
+                        <p>ACG資源, 在線裡番</p>
+                        <a href="https://miaowulifan.life/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>multi-service</h3>
+                        <p>外國Anima插畫搜索引擎，內有相關網站地址。</p>
+                        <a href="http://iqdb.org/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>SauceNAO</h3>
+                        <p>最強大的動漫插畫搜索引擎，可搜索P站插畫。</p>
+                        <a href="https://saucenao.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>動漫花園</h3>
+                        <p>擁有99%的能下載到的動漫資源。</p>
+                        <a href="https://share.dmhy.org/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>愛戀動漫</h3>
+                        <p>動漫資源網站，與動漫花園同步更新。</p>
+                        <a href="http://www.kisssub.org/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>nyaa</h3>
+                        <p>元老級磁力鏈接搜索網站，擁有與E-hentai同步更新的本子。</p>
+                        <a href="https://sukebei.nyaa.si/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>nyaapantsu</h3>
+                        <p>nyaa里站，擁有更多資源。</p>
+                        <a href="https://sukebei.pantsu.cat/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>E-hentai</h3>
+                        <p>元老級本子網站，擁有最全最新的本子。</p>
+                        <a href="https://e-hentai.org/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Exhentai</h3>
+                        <p>E-hentai的里站，擁有表站更多的本子。</p>
+                        <a href="https://exhentai.org/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>2DJGAME</h3>
+                        <p>元老級Galgame資源網站，擁有最全最新的Galgame和18+遊戲。</p>
+                        <a href="https://bbs4.2djgame.net/home/forum.php" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Mikocon</h3>
+                        <p>與2DJGAME類似。</p>
+                        <a href="https://bbs.mikocon.com" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>末日動漫資源庫</h3>
+                        <p>與動漫花園類似。</p>
+                        <a href="https://share.acgnx.se/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>簡單動漫</h3>
+                        <p>與動漫花園類似。</p>
+                        <a href="http://www.36dm.club/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Activity Stream</h3>
+                        <p>外國大型動漫論壇。</p>
+                        <a href="http://www.anime-sharing.com/forum/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>saber酱的抱枕</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://saber.love/acg" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>次元宅</h3>
+                        <p>綜合資源網站，擁有較多的技術資源。</p>
+                        <a href="https://www.acguz.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>pinnpinn</h3>
+                        <p>大型綜合資源網站，遊戲資源占比重大。</p>
+                        <a href="https://www.2dway.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>宅次元</h3>
+                        <p>大型綜合資源網站，有特色的遊戲漢化組。</p>
+                        <a href="https://18moe.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>幻天神域</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://www.acgns.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>91MOWANG</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://www.91mowang.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>面碼Buster</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://acgbuster.moe/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>二次元下午茶</h3>
+                        <p>綜合資源網站，擁有高質量MMD。</p>
+                        <a href="https://www.teaiii.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>喵紳</h3>
+                        <p>類E-hentai的18+同人志網站，與E-hentai同步更新。</p>
+                        <a href="https://hcomic.in/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Galgame終點</h3>
+                        <p>更新快擁有精良的Galgame，相關技術資源多。</p>
+                        <a href="https://bbs.zdfx.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>G車庫</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://www.galgame.lol/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>純色夜舞町</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="http://chunsedm.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>次元風</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="http://www.ciyuanfen.cc/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>最ACG</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://aibenzi.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>賽高次元</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://saigaocy.me/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>MyGAalgame</h3>
+                        <p>擁有較多的漢化Galgame。</p>
+                        <a href="https://www.mmgal.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>吉哩吉哩</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://jilili.one/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>crazy ideal</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://www.crazyideal.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>SS同盟</h3>
+                        <p>綜合資源網站，擁有較多18+遊戲資源。</p>
+                        <a href="https://sstm.moe/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>北+ North Plus</h3>
+                        <p>綜合資源網站，遊戲資源極多。</p>
+                        <a href="https://bbs.imoutolove.me/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Lv+ Level Plus</h3>
+                        <p>北+North Plus的備用站。</p>
+                        <a href="https://bbs.level-plus.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>美少女遊戲聯盟</h3>
+                        <p>Galgame資源多。</p>
+                        <a href="http://www.galgamez.cc/bbs/index.php" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>Nyadora</h3>
+                        <p>簡介的Galgame分享網站。</p>
+                        <a href="https://nyadora.moe/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>ACG1234享</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="http://www.acg1234.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>CE家族社</h3>
+                        <p>漢化組資源官方發布網站。</p>
+                        <a href="https://cefamilie.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>萌心次元</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://moxacg.moe/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>芯次元</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://acg.ci/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>愛彈幕</h3>
+                        <p>綜合資源網站，遊戲資源較多。</p>
+                        <a href="https://idanmu.at/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>南方次元</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="http://nfcy.me/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>次元客</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://www.acgke.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>萌推社</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://moetui.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>臭鼬娘俱樂部</h3>
+                        <p>戀屁同好交流分享網站，臭鼬娘漢化組官方網站。</p>
+                        <a href="https://skunkgirl.net/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>2DFan</h3>
+                        <p>專攻Galgame，並擁有相關新資訊，提供下載。</p>
+                        <a href="https://www.2dfan.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>ZMX-IT技術交流論壇</h3>
+                        <p>擁有較多技術資源。</p>
+                        <a href="http://bbs.itzmx.com/" target="_blank">訪問網站</a>
+                    </div>
+                    <div class="card">
+                        <h3>好萌動漫</h3>
+                        <p>綜合資源網站。</p>
+                        <a href="https://nicemoe.at/" target="_blank">訪問網站</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="menu.js"></script>
+</html>

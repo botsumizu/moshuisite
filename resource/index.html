@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moshui Resource | 歿水資源</title>
+    <style>
+        /* 自定义字体 */
+        @font-face {
+            font-family: 'ming';
+            src: url('fonts/ming.ttf') format('truetype');
+        }
+
+        /* 全局样式 */
+        body {
+            background-color: rgb(60, 60, 70);
+            perspective: 1000px;
+            height: 100%;
+            width: 100%;
+            font-family: 'ming', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 顶部区域 */
+        .top {
+            height: 100px;
+            width: 100%;
+        }
+
+        /* 卡片容器 */
+        .a {
+            margin: 0 auto;
+            width: 300px;
+            height: 400px;
+        }
+
+        /* 卡片翻转效果 */
+        .a:hover .b {
+            transform: rotateY(180deg);
+        }
+
+        /* 卡片样式 */
+        .b {
+            width: 300px;
+            height: 400px;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            background-image: url("1.gif");
+            transition: transform 1.5s;
+            box-shadow: 0 0 20px #000;
+        }
+
+        /* 卡片文字 */
+        .c, .d {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.8);
+            font: 900 60px 'ming', sans-serif;
+            letter-spacing: 10px;
+            line-height: 400px;
+        }
+
+        .c {
+            transform: translateZ(70px);
+        }
+
+        .d {
+            transform: translateZ(-70px) rotateY(180deg);
+        }
+
+        /* 中间区域 */
+        .mid {
+            height: 100px;
+            width: 100%;
+        }
+
+        /* 按钮容器 */
+        .ele_container {
+            height: 100px;
+            margin: 0 auto;
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /* 按钮样式 */
+        .ele_btn {
+            display: none;
+            font-size: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            transition: 0.5s ease;
+        }
+
+        .ele_btn p {
+            font-size: 25px;
+            color: rgba(255, 255, 255, 0.6);
+            display: none;
+        }
+
+        /* 按钮悬停效果 */
+        .ele_btn:hover {
+            cursor: pointer;
+        }
+
+        #hua:hover #sub_btn1,
+        #niao:hover #sub_btn2,
+        #feng:hover #sub_btn3,
+        #yue:hover #sub_btn4 {
+            display: block;
+        }
+
+        /* 动画效果 */
+        @keyframes show_ele {
+            from {
+                font-size: 0px;
+            }
+            to {
+                font-size: 30px;
+            }
+        }
+
+        @keyframes hide_btn {
+            from {
+                color: rgba(255, 255, 255, 0.8);
+            }
+            to {
+                color: rgba(255, 255, 255, 0);
+            }
+        }
+
+        @keyframes show_btn {
+            from {
+                color: rgba(255, 255, 255, 0);
+            }
+            to {
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部区域 -->
+    <header class="top"></header>
+
+    <!-- 卡片区域 -->
+    <main>
+        <div class="a" id="card" aria-label="翻转卡片">
+            <div class="b">
+                <span class="c">夢</span>
+                <span class="d">MENG</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- 中间空白区域 -->
+    <div class="mid"></div>
+
+    <!-- 按钮区域 -->
+    <section class="ele_container" id="ele_container">
+        <div id="hua" class="ele_btn" aria-label="華景導航">
+            華
+            <p id="sub_btn1">華景-導航</p>
+        </div>
+        <div id="niao" class="ele_btn" aria-label="鳥翼工具">
+            鳥
+            <p id="sub_btn2">鳥翼-工具</p>
+        </div>
+        <div id="feng" class="ele_btn" aria-label="風行漢學">
+            風
+            <p id="sub_btn3">風行-漢學</p>
+        </div>
+        <div id="yue" class="ele_btn" aria-label="月曜發佈">
+            月
+            <p id="sub_btn4">月耀-發佈</p>
+        </div>
+    </section>
+
+    <!-- 引入脚本 -->
+    <script src="./resource.js"></script>
+</body>
+</html>

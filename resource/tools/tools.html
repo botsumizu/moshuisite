@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鳥翼-工具</title>
+    <style>
+        @font-face
+        {
+            font-family: 'ming';
+            src: url('../fonts/ming.ttf');
+        }
+        body {
+            margin: 0;
+            font-family: 'ming', sans-serif;
+            background: linear-gradient(135deg, #5b5b7d, #5a5a63);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: #fff;
+        }
+
+        .tool-icon {
+            width: 100px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .tool-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .tool-icon.shake {
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+        }
+
+        .tool-icon.shrink {
+            animation: shrink 0.5s ease forwards;
+        }
+
+        @keyframes shrink {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+
+        .tool-container {
+            display: none;
+            margin-top: 20px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .tool-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .tool-card p {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .tool-card button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #0078d7;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .tool-card button:hover {
+            background: #005bb5;
+        }
+
+        /* 侧边栏样式 */
+        .sidebar {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.8); /* 收缩按钮为浅色 */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        .sidebar.expanded {
+            width: 200px;
+            height: 50px;
+            border-radius: 25px;
+            justify-content: space-between; /* 均匀分布按钮 */
+            background: rgba(0, 0, 0, 0.8); /* 展开后背景为深色 */
+        }
+
+        .sidebar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .sidebar button img {
+            width: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar.expanded button {
+            background: rgba(255, 255, 255, 0.8); /* 展开后其他按钮为浅色 */
+        }
+
+        .sidebar.expanded button:first-child {
+            background: rgba(255, 255, 255, 0.8); /* 收缩按钮保持浅色 */
+        }
+
+        .sidebar.expanded img {
+            transform: scale(1.2);
+        }
+
+        .sidebar span {
+            display: none;
+            color: #fff;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        .sidebar.expanded span {
+            display: inline;
+        }
+
+        /* 响应式设计：手机端侧边栏固定在底部 */
+        @media (max-width: 768px) {
+            .sidebar {
+                top: auto;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                height: 50px;
+                border-radius: 0;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 10px;
+            }
+
+            .sidebar.expanded {
+                width: 100%;
+                height: 50px;
+                border-radius: 0;
+                justify-content: space-between;
+            }
+
+            .sidebar button {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>鳥翼-工具</h1>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <button onclick="toggleSidebar()">
+            <img src="pct/open.png" alt="展開" id="toggleIcon">
+        </button>
+        <div id="extraButtons" style="display: none;">
+            <button onclick="window.open('https://github.com', '_blank')">
+                <img src="pct/github.png" alt="GitHub">
+            </button>
+            <button onclick="history.back()">
+                <img src="pct/back.png" alt="返回">
+            </button>
+        </div>
+    </div>
+
+    <img src="pct/tools.png" alt="工具圖標" class="tool-icon" onclick="showTools()">
+
+    <div class="tool-container" id="toolContainer">
+        <div class="tool-card">
+            <h3>MoshuiRSS閱讀器</h3>
+            <p>可以通過RSS訂閱鏈接閱讀相關內容</p>
+            <button onclick="window.open('https://resource.moshui.link/rss', '_blank')">访问工具</button>
+        </div>
+        <div class="tool-card">
+            <h3>MoshuiWord</h3>
+            <p>英語單詞翻譯及個人詞彙庫</p>
+            <button onclick="window.open('https://resource.moshui.link/word/', '_blank')">访问工具</button>
+        </div>
+        <div class="tool-card">
+            <h3>其他工具</h3>
+            <p>敬請期待</p>
+            <button onclick="window.open('', '_self')">访问工具</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>一些在線工具</p>
+    </footer>
+
+    <script>
+        function showTools() {
+            const icon = document.querySelector('.tool-icon');
+            const container = document.getElementById('toolContainer');
+
+            // 添加抖动动画
+            icon.classList.add('shake');
+            setTimeout(() => {
+                icon.classList.remove('shake');
+
+                // 添加缩小隐藏动画
+                icon.classList.add('shrink');
+                setTimeout(() => {
+                    icon.style.display = 'none'; // 动画结束后隐藏图标
+                    container.style.display = 'flex'; // 显示工具板块
+                }, 500); // 缩小动画持续时间
+            }, 500); // 抖动动画持续时间
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const toggleIcon = document.getElementById('toggleIcon');
+            const extraButtons = document.getElementById('extraButtons');
+
+            sidebar.classList.toggle('expanded');
+            if (sidebar.classList.contains('expanded')) {
+                toggleIcon.src = 'pct/close.png'; // 展开后变为收缩按钮
+                extraButtons.style.display = 'flex'; // 显示其他按钮
+            } else {
+                toggleIcon.src = 'pct/open.png'; // 收缩后变为展开按钮
+                extraButtons.style.display = 'none'; // 隐藏其他按钮
+            }
+        }
+    </script>
+</body>
+</html>

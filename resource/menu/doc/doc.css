@@ -1,0 +1,348 @@
+/* 文档区域样式 */
+.doc-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.doc-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1e3c72;
+}
+
+.doc-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+@font-face
+{
+    font-family: 'ming';
+    src: url('../../fonts/ming.ttf');
+}
+body {
+    font-family: 'ming', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    animation: background-rotation 40s infinite; /* 修改动画时长为40秒，适应4张图片 */
+}
+
+/* 背景轮换动画 */
+@keyframes background-rotation {
+    0% {
+        background: url('../pct/menu_bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    25% {
+        background: url('../pct/menu_bg2.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    50% {
+        background: url('../pct/menu_bg3.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    75% {
+        background: url('../pct/menu_bg4.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    100% {
+        background: url('../pct/menu_bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+
+/* 左侧导航栏样式 */
+.sidebar {
+    width: 160px; /* 侧边栏宽度 */
+    background: linear-gradient(135deg, #1e3b7248, #2a529848);;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    position: fixed; /* 固定模式 */
+    top: 0; /* 距离顶部 0 */
+    left: 0; /* 距离左侧 0 */
+    height: 100%; /* 高度占满整个视口 */
+    overflow-y: auto; /* 如果内容超出，允许滚动 */
+    transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar-header p {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    font-size: 0.9rem; /* 调整字体大小以适应较窄的导航栏 */
+}
+
+.sidebar a:hover {
+    background: #1e3c72;
+    color: #fff;
+}
+
+.content {
+    margin-left: 180px; /* 调整内容区域的左边距，与侧边栏宽度匹配 */
+    padding: 20px;
+    flex: 1;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+}
+
+.category-container {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.category-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #363636;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #fff;
+    color: #1e3c72;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.card a:hover {
+    background: #1e3c72;
+    color: #fff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .sidebar-footer {
+        display: none; /* 隐藏底部按钮 */
+    }
+    .sidebar-header {
+        display: none; /* 隐藏移动端的图标和文字 */
+    }
+
+    .sidebar {
+        width: 80px;
+        margin-left: 10px;
+        margin-top: 10px;
+        height: auto;
+        position: fixed;
+        box-shadow: none;
+        border-radius: 10%;
+    }
+
+    .sidebar a {
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    header {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    .category-container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+ /* 搜索框样式 */
+ .sidebar-search {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar-search input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.sidebar-search button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #1e3c72;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar-search button:hover {
+    background-color: #16325c;
+}
+
+/* 高亮搜索结果 */
+.highlight {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+/* 隐藏搜索框在移动端 */
+@media (max-width: 768px) {
+    .sidebar-search {
+        display: none;
+    }
+}
+
+/* Header 样式 */
+.site-header {
+    background: linear-gradient(135deg, #1e3b7248, #2a529848); /* 添加渐变背景 */
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #fff;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0;
+    color: #f0f0f0;
+}
+
+/* 底部按钮样式 */
+.sidebar-footer {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; /* 限制宽度，确保按钮居中 */
+    text-align: center;
+}
+
+.sidebar-footer button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto; /* 每个按钮之间增加间距 */
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.sidebar-footer button:hover {
+    transform: scale(1.1); /* 鼠标悬停时放大效果 */
+}
+
+.footer-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

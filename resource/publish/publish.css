@@ -1,0 +1,20 @@
+.container
+{
+    width: 100%; /* 容器宽度 */
+    height: 100%; /* 容器高度 */
+    background-color: rgba(255, 255, 255, 0.8); /* 背景颜色 */
+    border-radius: 10px; /* 圆角边框 */
+    padding: 10px; /* 内边距 */
+}
+.header
+{
+    justify-content: center;
+    text-align: center;
+    background-color: bisque;
+}
+#title
+{
+    font-size: 30px; /* 调整标题字体大小 */
+    
+    color: rgba(0, 0, 0, 0.8); /* 调整标题颜色 */
+}
